@@ -7,25 +7,51 @@ import Instructions from "./Instructions";
 
 interface State {
   file: BeyondFile | undefined;
+  characters: string[];
 }
 
 class App extends Component<{}, State> {
   state: State = {
     file: undefined,
+    characters: [],
   };
-  // async componentDidMount() {
-  //   const file = await spellLoader.getCharacter();
-  //   this.setState({file});
-  // }
+  componentDidMount() {
+    const json = localStorage.getItem("characters");
+    if (json) {
+      const characters: string[] = JSON.parse(json);
+      this.setState({ characters });
+    }
+  }
+  loadSaved = (name: string) => {
+    const json = localStorage.getItem(name);
+    if (json) {
+      this.updateCharacterJson(json);
+    }
+    else {
+      alert("Sorry, could not load character from memory.");
+      const characters = [...this.state.characters.filter(x => x !== name)];
+      this.setState({ characters }, () => {
+        const characterJson = JSON.stringify(characters);
+        localStorage.setItem("characters", characterJson);
+      });
+    }
+  }
   updateCharacterJson = (text: string) => {
     try {
-      const parsed = JSON.parse(text);
+      const parsed: BeyondFile = JSON.parse(text);
       if (parsed && parsed.character) {
-        this.setState({ file: parsed}, () => {
+        const charName = parsed.character.name;
+        localStorage.setItem(charName, text);
+        const characters = [...this.state.characters.filter(x => x !== charName), charName];
+        this.setState({ characters }, () => {
+          const characterJson = JSON.stringify(characters);
+          localStorage.setItem("characters", characterJson);
+        });
+        this.setState({ file: parsed }, () => {
           const myView = document.getElementById("beyondFileView");
-          if (myView){
-            myView.scrollIntoView();
-          }           
+          if (myView) {
+            myView.scrollIntoView({ behavior: "smooth" });
+          }
         });
       }
       else {
@@ -40,9 +66,9 @@ class App extends Component<{}, State> {
     console.log("Blob One");
     const reader = new FileReader();
     reader.onload = () => {
-        if (reader.result && typeof reader.result === "string"){
-          this.updateCharacterJson(reader.result);
-        }        
+      if (reader.result && typeof reader.result === "string") {
+        this.updateCharacterJson(reader.result);
+      }
     };
     reader.readAsText(blob);
   }
@@ -68,6 +94,23 @@ class App extends Component<{}, State> {
           <a href="https://github.com/Pharylon/Spellbook/issues">submit a bug report.</a> Thanks!
         </div>
         <div className={"instructions"}>
+          {
+            !!this.state.characters.length && (
+              <div className="steps">
+                <div className="step">
+                  <div className="step-title">Load A previously Saved Character</div>
+                  <ul>
+                    {this.state.characters.map(x => (
+                      <li onClick={() => this.loadSaved(x)} key={x}>
+                        <span className="previous-character">{x}&nbsp;</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="or"> - OR LOAD A NEW FILE -</div>
+              </div>
+            )
+          }
           <Instructions updateCharacterJson={this.updateCharacterBlob} />
         </div>
         {

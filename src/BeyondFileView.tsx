@@ -1,5 +1,5 @@
 import React from "react";
-import BeyondFile from "./character";
+import BeyondFile, { ClassSpell, Spell } from "./character";
 import { sortMultipleSpells } from "./spellLevel";
 import SpellBook from "./SpellBook";
 
@@ -17,11 +17,17 @@ class BeyondFileView extends React.PureComponent<IBeyondFileView> {
       }
     }
   }
+  getAllClassSpells = () => {
+    const allClassSpells: Spell[] = [];
+    this.props.file.character.classSpells.forEach(cs => allClassSpells.push(...cs.spells));
+    return allClassSpells;
+  }
   render(){
-    const wizardSpells = this.getClassSpells("Wizard");
+    //const wizardSpells = this.getClassSpells("Wizard");
+    const classSpells = this.getAllClassSpells();
     const itemSpells = this.props.file.character.spells.item;
     const featSpells = this.props.file.character.spells.feat;
-    const spellsByLevel = sortMultipleSpells(wizardSpells, itemSpells, featSpells);
+    const spellsByLevel = sortMultipleSpells(classSpells, itemSpells, featSpells);
     if (spellsByLevel.find(x => x.spells.length > 0)){ 
       return (
         <SpellBook spells={spellsByLevel} />

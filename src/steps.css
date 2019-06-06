@@ -39,6 +39,7 @@ input{
   font-size: 1.3em;
   font-weight: bold;
   margin-top: 5px;
+  padding-bottom: 3px;
 }
 
 .done-button{

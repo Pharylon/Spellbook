@@ -62,3 +62,44 @@ a{
   margin-left: auto;
   margin-right: auto;
 }
+
+.spell{
+  margin-bottom: 30px;
+}
+
+.spellbook{
+  margin: 0px 5px 0px 5px;
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  .section-to-print, .section-to-print *:not(.hide-print) {
+    visibility: visible;
+  }
+  .section-to-print {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  .hide-print-block{
+    display: block !important;
+  }
+}
+
+.previous-character{
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.previous-character:hover{
+  text-decoration: underline;
+}
+
+.or{
+  margin: auto;
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}

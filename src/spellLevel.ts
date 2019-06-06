@@ -65,6 +65,7 @@ export const sortSpells = (spells: Spell[]): SpellLevelCollection[] => {
       collection.spells.push(spell);
     }    
   });
+  spellLevels.sort((a, b) => a.level - b.level);
   spellLevels.forEach(sl => {
     sl.spells.sort((a, b) => a.definition.name > b.definition.name ? 1 : 0);
   });

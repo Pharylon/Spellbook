@@ -29,4 +29,4 @@ const getComponents = (components: number[]) => {
   const mapped = components.map(x => x === 1 ? "V" : x === 2 ? "S" : "M");
   const joined = mapped.join(", ");
   return joined;
-}
+};
