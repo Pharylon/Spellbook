@@ -1,4 +1,4 @@
-import BeyondFile, { Spell } from "./character.js";
+import BeyondFile from "./character.js";
 
 const spellLoader = {
   // getCharacter(): void {

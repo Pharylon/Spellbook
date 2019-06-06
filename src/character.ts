@@ -85,7 +85,7 @@ export interface BeyondCharacter {
 export interface Actions {
   race:  any[];
   class: ActionsClass[];
-  feat:  ActionsFeat[];
+  feat:  FeatSpell[];
   item?: ItemSpell[];
 }
 
@@ -141,31 +141,6 @@ export interface ClassRange {
   aoeType:                  null;
   aoeSize:                  null;
   hasAoeSpecialDescription: boolean;
-}
-
-export interface ActionsFeat {
-  overrideSaveDc:        null;
-  limitedUse:            ClassLimitedUse | null;
-  id:                    number;
-  entityTypeId:          number;
-  definition:            ItemDefinition;
-  prepared:              null;
-  countsAsKnownSpell:    boolean;
-  usesSpellSlot:         boolean;
-  castAtLevel:           number | null;
-  alwaysPrepared:        null;
-  restriction:           string;
-  spellCastingAbilityId: number;
-  displayAsAttack:       null;
-  additionalDescription: null;
-  castOnlyAsRitual:      boolean;
-  ritualCastingType:     null;
-  range:                 DefinitionRange;
-  activation:            Activation;
-  baseLevelAtWill:       boolean;
-  atWillLimitedUseLevel: null;
-  componentId:           number;
-  componentTypeId:       number;
 }
 
 export interface ItemDefinition {
@@ -486,6 +461,12 @@ export interface ItemSpell extends Spell {
   overrideSaveDc:        null;
   limitedUse:            ItemLimitedUse;
 }
+
+export interface FeatSpell extends Spell {
+  overrideSaveDc:        null;
+  limitedUse:            ClassLimitedUse | null;
+}
+
 
 
 export interface CharacterClass {

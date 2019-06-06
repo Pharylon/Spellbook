@@ -13784,197 +13784,6 @@
             "componentTypeId": 0
           },
           {
-            "id": 1442807,
-            "entityTypeId": 435869154,
-            "definition": {
-              "id": 159623,
-              "name": "Bodkin of Brio",
-              "level": 3,
-              "school": "Necromancy",
-              "duration": {
-                "durationInterval": null,
-                "durationUnit": null,
-                "durationType": "Concentration"
-              },
-              "activation": {
-                "activationTime": 1,
-                "activationType": 1
-              },
-              "range": {
-                "origin": "Ranged",
-                "rangeValue": 15,
-                "aoeType": null,
-                "aoeValue": null
-              },
-              "asPartOfWeaponAttack": false,
-              "description": "<p><span style=\"font-weight:400\">The bark becomes a bodkin or other sharp wooden shard. You may send it hurling toward a target within twenty feet as a bonus action. The Bodkin deals 1d6 necromantic damage to the target. A creature with resistance to necromantic damage takes full damage. Creatures immune to necromantic damage take damage as if they were resistant instead.<br></span></p>\r\n<p><span style=\"font-weight:400\">If the target is undead or a plant, it takes 2d6 damage and must succeed at a Constitution saving throw, otherwise it suffers debilitating effects depending on the age of the bodkin used as a material component. If the bodkin is twice as old as the target, it is destroyed. Otherwise, it is stunned. It may attempt to save again at the end of each of it's turns. </span></p>\r\n<p><span style=\"font-weight:400\"><strong>At Higher Levels.</strong> When you cast this spell using a spell slot of 4th level or higher, the damage increases by 1d6 vs normal creatures and 2d6 vs undead and plant creatures for every 3 levels above 3rd.</span></p>",
-              "snippet": "",
-              "concentration": true,
-              "ritual": false,
-              "rangeArea": null,
-              "damageEffect": null,
-              "components": [
-                1,
-                2,
-                3
-              ],
-              "componentsDescription": "Palm sized bark removed in the last seven days from a tree at least 400 years of age.",
-              "saveDcAbilityId": null,
-              "healing": null,
-              "healingDice": null,
-              "tempHpDice": null,
-              "attackType": null,
-              "canCastAtHigherLevel": true,
-              "isHomebrew": true,
-              "version": "Beta-1",
-              "sourceId": null,
-              "sourcePageNumber": null,
-              "requiresSavingThrow": false,
-              "requiresAttackRoll": false,
-              "atHigherLevels": {
-                "scaleType": "spelllevel",
-                "higherLevelDefinitions": [],
-                "additionalAttacks": [],
-                "additionalTargets": [],
-                "areaOfEffect": [],
-                "duration": [],
-                "creatures": [],
-                "special": [],
-                "points": []
-              },
-              "modifiers": [
-                {
-                  "id": "spell_159623_118402",
-                  "type": "damage",
-                  "subType": "necrotic",
-                  "die": {
-                    "diceCount": 1,
-                    "diceValue": 6,
-                    "diceMultiplier": null,
-                    "fixedValue": null,
-                    "diceString": "1d6"
-                  },
-                  "count": 1,
-                  "duration": 0,
-                  "durationUnit": null,
-                  "restriction": "Against non-undead, non-plant creatures",
-                  "friendlyTypeName": "Damage",
-                  "friendlySubtypeName": "Necrotic",
-                  "usePrimaryStat": false,
-                  "atHigherLevels": {
-                    "scaleType": "spelllevel",
-                    "higherLevelDefinitions": [
-                      {
-                        "level": 6,
-                        "typeId": 16,
-                        "dice": {
-                          "diceCount": 1,
-                          "diceValue": 6,
-                          "diceMultiplier": null,
-                          "fixedValue": 0,
-                          "diceString": "1d6"
-                        },
-                        "value": null,
-                        "details": ""
-                      }
-                    ],
-                    "additionalAttacks": [
-                      {
-                        "totalCount": 0,
-                        "level": 6,
-                        "description": ""
-                      }
-                    ],
-                    "additionalTargets": [],
-                    "areaOfEffect": [],
-                    "duration": [],
-                    "creatures": [],
-                    "special": [],
-                    "points": []
-                  }
-                },
-                {
-                  "id": "spell_159623_118403",
-                  "type": "damage",
-                  "subType": "necrotic",
-                  "die": {
-                    "diceCount": 2,
-                    "diceValue": 6,
-                    "diceMultiplier": null,
-                    "fixedValue": null,
-                    "diceString": "2d6"
-                  },
-                  "count": 1,
-                  "duration": 0,
-                  "durationUnit": null,
-                  "restriction": "Against undead or plant creatures",
-                  "friendlyTypeName": "Damage",
-                  "friendlySubtypeName": "Necrotic",
-                  "usePrimaryStat": false,
-                  "atHigherLevels": {
-                    "scaleType": "spelllevel",
-                    "higherLevelDefinitions": [
-                      {
-                        "level": 6,
-                        "typeId": 16,
-                        "dice": {
-                          "diceCount": 2,
-                          "diceValue": 6,
-                          "diceMultiplier": null,
-                          "fixedValue": 0,
-                          "diceString": "2d6"
-                        },
-                        "value": null,
-                        "details": "Against plants and undead creatures"
-                      }
-                    ],
-                    "additionalAttacks": [
-                      {
-                        "totalCount": 0,
-                        "level": 6,
-                        "description": "Against plants and undead creatures"
-                      }
-                    ],
-                    "additionalTargets": [],
-                    "areaOfEffect": [],
-                    "duration": [],
-                    "creatures": [],
-                    "special": [],
-                    "points": []
-                  }
-                }
-              ],
-              "conditions": [],
-              "tags": [],
-              "castingTimeDescription": ""
-            },
-            "prepared": false,
-            "countsAsKnownSpell": true,
-            "usesSpellSlot": true,
-            "castAtLevel": null,
-            "alwaysPrepared": false,
-            "restriction": null,
-            "spellCastingAbilityId": null,
-            "displayAsAttack": null,
-            "additionalDescription": null,
-            "castOnlyAsRitual": false,
-            "ritualCastingType": null,
-            "range": {
-              "origin": "Ranged",
-              "rangeValue": 15,
-              "aoeType": null,
-              "aoeValue": null
-            },
-            "activation": {
-              "activationTime": 1,
-              "activationType": 1
-            },
-            "baseLevelAtWill": false,
-            "atWillLimitedUseLevel": null,
-            "componentId": 0,
-            "componentTypeId": 0
-          },
-          {
             "id": 1442652,
             "entityTypeId": 435869154,
             "definition": {
@@ -15160,6 +14969,930 @@
             "atWillLimitedUseLevel": null,
             "componentId": 0,
             "componentTypeId": 0
+          },
+          {
+            "id": 1435772,
+            "entityTypeId": 435869154,
+            "definition": {
+              "id": 158846,
+              "name": "Denaliah's Dreadfull Chains",
+              "level": 4,
+              "school": "Necromancy",
+              "duration": {
+                "durationInterval": null,
+                "durationUnit": null,
+                "durationType": "Until Dispelled"
+              },
+              "activation": {
+                "activationTime": 1,
+                "activationType": 4
+              },
+              "range": {
+                "origin": "Ranged",
+                "rangeValue": 60,
+                "aoeType": null,
+                "aoeValue": null
+              },
+              "asPartOfWeaponAttack": false,
+              "description": "<p><span style=\"font-weight:400\">You trap the soul of a dying creature in it's own body and make it into an undead servant. The creature gains a number of hit points equal to half of its maximum. The creature must follow your commands to the best of its ability, although it is not friendly and may resent being controlled. At the end of each of the creature's turns, it may make a charisma saving throw. On a success, it's soul escapes the body and the target becomes a normal zombie (the DM has the creature's game statistics) under your control for 24 hours as if it were animated using the </span><em><span style=\"font-weight:400\">Animate Dead</span></em><span style=\"font-weight:400\"> spell.</span></p>\r\n<p><span style=\"font-weight:400\">You may only have one non-zombie creature that has been controlled by Marionette at a time. If you cast this spell again while you control a creature that has not passed its saving throw, the soul of the previously controlled creature escapes as if it had passed its saving throw.</span></p>\r\n<p><span style=\"font-weight:400\"><strong>At Higher Levels: </strong><span style=\"font-weight:400\">When you cast this spell using a spell slot of 5th level, the creature only makes a saving throw once per minute. At 6th level, this increases to once per hour. At 7th level, once per day, and at 8th level it lasts for a year and a day. At 9th level the effect is permanent.</span></span></p>",
+              "snippet": "",
+              "concentration": false,
+              "ritual": false,
+              "rangeArea": null,
+              "damageEffect": null,
+              "components": [
+                1,
+                2,
+                3
+              ],
+              "componentsDescription": "a puppet's string",
+              "saveDcAbilityId": null,
+              "healing": null,
+              "healingDice": null,
+              "tempHpDice": null,
+              "attackType": null,
+              "canCastAtHigherLevel": false,
+              "isHomebrew": true,
+              "version": "",
+              "sourceId": null,
+              "sourcePageNumber": null,
+              "requiresSavingThrow": false,
+              "requiresAttackRoll": false,
+              "atHigherLevels": {
+                "scaleType": null,
+                "higherLevelDefinitions": [],
+                "additionalAttacks": [],
+                "additionalTargets": [],
+                "areaOfEffect": [],
+                "duration": [],
+                "creatures": [],
+                "special": [],
+                "points": []
+              },
+              "modifiers": [],
+              "conditions": [],
+              "tags": [],
+              "castingTimeDescription": ""
+            },
+            "prepared": false,
+            "countsAsKnownSpell": true,
+            "usesSpellSlot": true,
+            "castAtLevel": null,
+            "alwaysPrepared": false,
+            "restriction": null,
+            "spellCastingAbilityId": null,
+            "displayAsAttack": null,
+            "additionalDescription": null,
+            "castOnlyAsRitual": false,
+            "ritualCastingType": null,
+            "range": {
+              "origin": "Ranged",
+              "rangeValue": 60,
+              "aoeType": null,
+              "aoeValue": null
+            },
+            "activation": {
+              "activationTime": 1,
+              "activationType": 4
+            },
+            "baseLevelAtWill": false,
+            "atWillLimitedUseLevel": null,
+            "componentId": 0,
+            "componentTypeId": 0
+          },
+          {
+            "id": 1442807,
+            "entityTypeId": 435869154,
+            "definition": {
+              "id": 159623,
+              "name": "Bodkin of Brio",
+              "level": 3,
+              "school": "Necromancy",
+              "duration": {
+                "durationInterval": null,
+                "durationUnit": null,
+                "durationType": "Concentration"
+              },
+              "activation": {
+                "activationTime": 1,
+                "activationType": 1
+              },
+              "range": {
+                "origin": "Ranged",
+                "rangeValue": 15,
+                "aoeType": null,
+                "aoeValue": null
+              },
+              "asPartOfWeaponAttack": false,
+              "description": "<p><span style=\"font-weight:400\">The bark becomes a bodkin or other sharp wooden shard. You may send it hurling toward a target within twenty feet as a bonus action. The Bodkin deals 1d6 necromantic damage to the target. A creature with resistance to necromantic damage takes full damage. Creatures immune to necromantic damage take damage as if they were resistant instead.<br></span></p>\r\n<p><span style=\"font-weight:400\">If the target is undead or a plant, it takes 2d6 damage and must succeed at a Constitution saving throw, otherwise it suffers debilitating effects depending on the age of the bodkin used as a material component. If the bodkin is twice as old as the target, it is destroyed. Otherwise, it is stunned. It may attempt to save again at the end of each of it's turns. </span></p>\r\n<p><span style=\"font-weight:400\"><strong>At Higher Levels.</strong> When you cast this spell using a spell slot of 4th level or higher, the damage increases by 1d6 vs normal creatures and 2d6 vs undead and plant creatures for every 3 levels above 3rd.</span></p>",
+              "snippet": "",
+              "concentration": true,
+              "ritual": false,
+              "rangeArea": null,
+              "damageEffect": null,
+              "components": [
+                1,
+                2,
+                3
+              ],
+              "componentsDescription": "Palm sized bark removed in the last seven days from a tree at least 400 years of age.",
+              "saveDcAbilityId": null,
+              "healing": null,
+              "healingDice": null,
+              "tempHpDice": null,
+              "attackType": null,
+              "canCastAtHigherLevel": true,
+              "isHomebrew": true,
+              "version": "Beta-1",
+              "sourceId": null,
+              "sourcePageNumber": null,
+              "requiresSavingThrow": false,
+              "requiresAttackRoll": false,
+              "atHigherLevels": {
+                "scaleType": "spelllevel",
+                "higherLevelDefinitions": [],
+                "additionalAttacks": [],
+                "additionalTargets": [],
+                "areaOfEffect": [],
+                "duration": [],
+                "creatures": [],
+                "special": [],
+                "points": []
+              },
+              "modifiers": [
+                {
+                  "id": "spell_159623_118402",
+                  "type": "damage",
+                  "subType": "necrotic",
+                  "die": {
+                    "diceCount": 1,
+                    "diceValue": 6,
+                    "diceMultiplier": null,
+                    "fixedValue": null,
+                    "diceString": "1d6"
+                  },
+                  "count": 1,
+                  "duration": 0,
+                  "durationUnit": null,
+                  "restriction": "Against non-undead, non-plant creatures",
+                  "friendlyTypeName": "Damage",
+                  "friendlySubtypeName": "Necrotic",
+                  "usePrimaryStat": false,
+                  "atHigherLevels": {
+                    "scaleType": "spelllevel",
+                    "higherLevelDefinitions": [
+                      {
+                        "level": 6,
+                        "typeId": 16,
+                        "dice": {
+                          "diceCount": 1,
+                          "diceValue": 6,
+                          "diceMultiplier": null,
+                          "fixedValue": 0,
+                          "diceString": "1d6"
+                        },
+                        "value": null,
+                        "details": ""
+                      }
+                    ],
+                    "additionalAttacks": [
+                      {
+                        "totalCount": 0,
+                        "level": 6,
+                        "description": ""
+                      }
+                    ],
+                    "additionalTargets": [],
+                    "areaOfEffect": [],
+                    "duration": [],
+                    "creatures": [],
+                    "special": [],
+                    "points": []
+                  }
+                },
+                {
+                  "id": "spell_159623_118403",
+                  "type": "damage",
+                  "subType": "necrotic",
+                  "die": {
+                    "diceCount": 2,
+                    "diceValue": 6,
+                    "diceMultiplier": null,
+                    "fixedValue": null,
+                    "diceString": "2d6"
+                  },
+                  "count": 1,
+                  "duration": 0,
+                  "durationUnit": null,
+                  "restriction": "Against undead or plant creatures",
+                  "friendlyTypeName": "Damage",
+                  "friendlySubtypeName": "Necrotic",
+                  "usePrimaryStat": false,
+                  "atHigherLevels": {
+                    "scaleType": "spelllevel",
+                    "higherLevelDefinitions": [
+                      {
+                        "level": 6,
+                        "typeId": 16,
+                        "dice": {
+                          "diceCount": 2,
+                          "diceValue": 6,
+                          "diceMultiplier": null,
+                          "fixedValue": 0,
+                          "diceString": "2d6"
+                        },
+                        "value": null,
+                        "details": "Against plants and undead creatures"
+                      }
+                    ],
+                    "additionalAttacks": [
+                      {
+                        "totalCount": 0,
+                        "level": 6,
+                        "description": "Against plants and undead creatures"
+                      }
+                    ],
+                    "additionalTargets": [],
+                    "areaOfEffect": [],
+                    "duration": [],
+                    "creatures": [],
+                    "special": [],
+                    "points": []
+                  }
+                }
+              ],
+              "conditions": [],
+              "tags": [],
+              "castingTimeDescription": ""
+            },
+            "prepared": false,
+            "countsAsKnownSpell": true,
+            "usesSpellSlot": true,
+            "castAtLevel": null,
+            "alwaysPrepared": false,
+            "restriction": null,
+            "spellCastingAbilityId": null,
+            "displayAsAttack": null,
+            "additionalDescription": null,
+            "castOnlyAsRitual": false,
+            "ritualCastingType": null,
+            "range": {
+              "origin": "Ranged",
+              "rangeValue": 15,
+              "aoeType": null,
+              "aoeValue": null
+            },
+            "activation": {
+              "activationTime": 1,
+              "activationType": 1
+            },
+            "baseLevelAtWill": false,
+            "atWillLimitedUseLevel": null,
+            "componentId": 0,
+            "componentTypeId": 0
+          },
+          {
+            "id": 138343,
+            "entityTypeId": 435869154,
+            "definition": {
+              "id": 2152,
+              "name": "Identify",
+              "level": 1,
+              "school": "Divination",
+              "duration": {
+                "durationInterval": 0,
+                "durationUnit": null,
+                "durationType": "Instantaneous"
+              },
+              "activation": {
+                "activationTime": 1,
+                "activationType": 6
+              },
+              "range": {
+                "origin": "Touch",
+                "rangeValue": 0,
+                "aoeType": null,
+                "aoeValue": null
+              },
+              "asPartOfWeaponAttack": false,
+              "description": "<p>You choose one object that you must touch throughout the casting of the spell. If it is a magic item or some other magic-imbued object, you learn its properties and how to use them, whether it requires attunement to use, and how many charges it has, if any. You learn whether any spells are affecting the item and what they are. If the item was created by a spell, you learn which spell created it.</p>\r\n<p>If you instead touch a creature throughout the casting, you learn what spells, if any, are currently affecting it.</p>",
+              "snippet": "",
+              "concentration": false,
+              "ritual": true,
+              "rangeArea": null,
+              "damageEffect": null,
+              "components": [
+                1,
+                2,
+                3
+              ],
+              "componentsDescription": "a pearl worth at least 100 gp and an owl feather",
+              "saveDcAbilityId": null,
+              "healing": null,
+              "healingDice": null,
+              "tempHpDice": null,
+              "attackType": null,
+              "canCastAtHigherLevel": false,
+              "isHomebrew": false,
+              "version": null,
+              "sourceId": 2,
+              "sourcePageNumber": 252,
+              "requiresSavingThrow": false,
+              "requiresAttackRoll": false,
+              "atHigherLevels": {
+                "scaleType": null,
+                "higherLevelDefinitions": [],
+                "additionalAttacks": [],
+                "additionalTargets": [],
+                "areaOfEffect": [],
+                "duration": [],
+                "creatures": [],
+                "special": [],
+                "points": []
+              },
+              "modifiers": [],
+              "conditions": [],
+              "tags": [
+                "Detection"
+              ],
+              "castingTimeDescription": ""
+            },
+            "prepared": false,
+            "countsAsKnownSpell": true,
+            "usesSpellSlot": true,
+            "castAtLevel": null,
+            "alwaysPrepared": false,
+            "restriction": null,
+            "spellCastingAbilityId": null,
+            "displayAsAttack": null,
+            "additionalDescription": null,
+            "castOnlyAsRitual": false,
+            "ritualCastingType": null,
+            "range": {
+              "origin": "Touch",
+              "rangeValue": 0,
+              "aoeType": null,
+              "aoeValue": null
+            },
+            "activation": {
+              "activationTime": 1,
+              "activationType": 6
+            },
+            "baseLevelAtWill": false,
+            "atWillLimitedUseLevel": null,
+            "componentId": 0,
+            "componentTypeId": 0
+          },
+          {
+            "id": 136027,
+            "entityTypeId": 435869154,
+            "definition": {
+              "id": 1991,
+              "name": "Alarm",
+              "level": 1,
+              "school": "Abjuration",
+              "duration": {
+                "durationInterval": 8,
+                "durationUnit": "Hour",
+                "durationType": "Time"
+              },
+              "activation": {
+                "activationTime": 1,
+                "activationType": 6
+              },
+              "range": {
+                "origin": "Ranged",
+                "rangeValue": 30,
+                "aoeType": null,
+                "aoeValue": null
+              },
+              "asPartOfWeaponAttack": false,
+              "description": "<p>You set an alarm against unwanted intrusion. Choose a door, a window, or an area within range that is no larger than a 20-foot cube. Until the spell ends, an alarm alerts you whenever a Tiny or larger creature touches or enters the warded area. When you cast the spell, you can designate creatures that won't set off the alarm. You also choose whether the alarm is mental or audible.</p>\r\n<p>A mental alarm alerts you with a ping in your mind if you are within 1 mile of the warded area. This ping awakens you if you are sleeping.</p>\r\n<p>An audible alarm produces the sound of a hand bell for 10 seconds within 60 feet.</p>",
+              "snippet": "",
+              "concentration": false,
+              "ritual": true,
+              "rangeArea": null,
+              "damageEffect": null,
+              "components": [
+                1,
+                2,
+                3
+              ],
+              "componentsDescription": "a tiny bell and a piece of fine silver wire",
+              "saveDcAbilityId": null,
+              "healing": null,
+              "healingDice": null,
+              "tempHpDice": null,
+              "attackType": null,
+              "canCastAtHigherLevel": false,
+              "isHomebrew": false,
+              "version": null,
+              "sourceId": 2,
+              "sourcePageNumber": 211,
+              "requiresSavingThrow": false,
+              "requiresAttackRoll": false,
+              "atHigherLevels": {
+                "scaleType": null,
+                "higherLevelDefinitions": [],
+                "additionalAttacks": [],
+                "additionalTargets": [],
+                "areaOfEffect": [],
+                "duration": [],
+                "creatures": [],
+                "special": [],
+                "points": []
+              },
+              "modifiers": [],
+              "conditions": [],
+              "tags": [
+                "Detection"
+              ],
+              "castingTimeDescription": ""
+            },
+            "prepared": false,
+            "countsAsKnownSpell": true,
+            "usesSpellSlot": true,
+            "castAtLevel": null,
+            "alwaysPrepared": false,
+            "restriction": null,
+            "spellCastingAbilityId": null,
+            "displayAsAttack": null,
+            "additionalDescription": null,
+            "castOnlyAsRitual": false,
+            "ritualCastingType": null,
+            "range": {
+              "origin": "Ranged",
+              "rangeValue": 30,
+              "aoeType": null,
+              "aoeValue": null
+            },
+            "activation": {
+              "activationTime": 1,
+              "activationType": 6
+            },
+            "baseLevelAtWill": false,
+            "atWillLimitedUseLevel": null,
+            "componentId": 0,
+            "componentTypeId": 0
+          },
+          {
+            "id": 138845,
+            "entityTypeId": 435869154,
+            "definition": {
+              "id": 2321,
+              "name": "Tenser’s Floating Disk",
+              "level": 1,
+              "school": "Conjuration",
+              "duration": {
+                "durationInterval": 1,
+                "durationUnit": "Hour",
+                "durationType": "Time"
+              },
+              "activation": {
+                "activationTime": 1,
+                "activationType": 1
+              },
+              "range": {
+                "origin": "Ranged",
+                "rangeValue": 30,
+                "aoeType": null,
+                "aoeValue": null
+              },
+              "asPartOfWeaponAttack": false,
+              "description": "<p>This spell creates a circular, horizontal plane of force, 3 feet in diameter and 1 inch thick, that floats 3 feet above the ground in an unoccupied space of your choice that you can see within range. The disk remains for the duration, and can hold up to 500 pounds. If more weight is placed on it, the spell ends, and everything on the disk falls to the ground.<br><br>The disk is immobile while you are within 20 feet of it. If you move more than 20 feet away from it, the disk follows you so that it remains within 20 feet of you. It can move across uneven terrain, up or down stairs, slopes and the like, but it can&rsquo;t cross an elevation change of 10 feet or more. For example, the disk can&rsquo;t move across a 10-foot-deep pit, nor could it leave such a pit if it was created at the bottom.<br><br>If you move more than 100 feet from the disk (typically because it can&rsquo;t move around an obstacle to follow you), the spell ends.</p>",
+              "snippet": "",
+              "concentration": false,
+              "ritual": true,
+              "rangeArea": null,
+              "damageEffect": null,
+              "components": [
+                1,
+                2,
+                3
+              ],
+              "componentsDescription": "a drop of mercury",
+              "saveDcAbilityId": null,
+              "healing": null,
+              "healingDice": null,
+              "tempHpDice": null,
+              "attackType": null,
+              "canCastAtHigherLevel": false,
+              "isHomebrew": false,
+              "version": null,
+              "sourceId": 2,
+              "sourcePageNumber": 282,
+              "requiresSavingThrow": false,
+              "requiresAttackRoll": false,
+              "atHigherLevels": {
+                "scaleType": null,
+                "higherLevelDefinitions": [],
+                "additionalAttacks": [],
+                "additionalTargets": [],
+                "areaOfEffect": [],
+                "duration": [],
+                "creatures": [],
+                "special": [],
+                "points": []
+              },
+              "modifiers": [],
+              "conditions": [],
+              "tags": [
+                "Movement",
+                "Utility"
+              ],
+              "castingTimeDescription": ""
+            },
+            "prepared": false,
+            "countsAsKnownSpell": true,
+            "usesSpellSlot": true,
+            "castAtLevel": null,
+            "alwaysPrepared": false,
+            "restriction": null,
+            "spellCastingAbilityId": null,
+            "displayAsAttack": null,
+            "additionalDescription": null,
+            "castOnlyAsRitual": false,
+            "ritualCastingType": null,
+            "range": {
+              "origin": "Ranged",
+              "rangeValue": 30,
+              "aoeType": null,
+              "aoeValue": null
+            },
+            "activation": {
+              "activationTime": 1,
+              "activationType": 1
+            },
+            "baseLevelAtWill": false,
+            "atWillLimitedUseLevel": null,
+            "componentId": 0,
+            "componentTypeId": 0
+          },
+          {
+            "id": 2370,
+            "entityTypeId": 435869154,
+            "definition": {
+              "id": 2203,
+              "name": "Phantom Steed",
+              "level": 3,
+              "school": "Illusion",
+              "duration": {
+                "durationInterval": 1,
+                "durationUnit": "Hour",
+                "durationType": "Time"
+              },
+              "activation": {
+                "activationTime": 1,
+                "activationType": 6
+              },
+              "range": {
+                "origin": "Ranged",
+                "rangeValue": 30,
+                "aoeType": null,
+                "aoeValue": null
+              },
+              "asPartOfWeaponAttack": false,
+              "description": "<p>A Large quasi-real, horselike creature appears on the ground in an unoccupied space of your choice within range. You decide the creature's appearance, but it is equipped with a saddle, bit, and bridle. Any of the equipment created by the spell vanishes in a puff of smoke if it is carried more than 10 feet away from the steed. </p>\n<p>For the duration, you or a creature you choose can ride the steed. The creature uses the statistics for a riding horse, except it has a speed of 100 feet and can travel 10 miles in an hour, or 13 miles at a fast pace. When the spell ends, the steed gradually fades, giving the rider 1 minute to dismount. The spell ends if you use an action to dismiss it or if the steed takes any damage.</p>",
+              "snippet": null,
+              "concentration": false,
+              "ritual": true,
+              "rangeArea": null,
+              "damageEffect": null,
+              "components": [
+                1,
+                2
+              ],
+              "componentsDescription": "",
+              "saveDcAbilityId": null,
+              "healing": null,
+              "healingDice": null,
+              "tempHpDice": null,
+              "attackType": null,
+              "canCastAtHigherLevel": false,
+              "isHomebrew": false,
+              "version": null,
+              "sourceId": 2,
+              "sourcePageNumber": null,
+              "requiresSavingThrow": false,
+              "requiresAttackRoll": false,
+              "atHigherLevels": {
+                "scaleType": null,
+                "higherLevelDefinitions": [],
+                "additionalAttacks": [],
+                "additionalTargets": [],
+                "areaOfEffect": [],
+                "duration": [],
+                "creatures": [],
+                "special": [],
+                "points": []
+              },
+              "modifiers": [],
+              "conditions": [],
+              "tags": [
+                "Movement"
+              ],
+              "castingTimeDescription": ""
+            },
+            "prepared": false,
+            "countsAsKnownSpell": true,
+            "usesSpellSlot": true,
+            "castAtLevel": null,
+            "alwaysPrepared": false,
+            "restriction": null,
+            "spellCastingAbilityId": null,
+            "displayAsAttack": null,
+            "additionalDescription": null,
+            "castOnlyAsRitual": false,
+            "ritualCastingType": null,
+            "range": {
+              "origin": "Ranged",
+              "rangeValue": 30,
+              "aoeType": null,
+              "aoeValue": null
+            },
+            "activation": {
+              "activationTime": 1,
+              "activationType": 6
+            },
+            "baseLevelAtWill": false,
+            "atWillLimitedUseLevel": null,
+            "componentId": 0,
+            "componentTypeId": 0
+          },
+          {
+            "id": 136432,
+            "entityTypeId": 435869154,
+            "definition": {
+              "id": 2048,
+              "name": "Continual Flame",
+              "level": 2,
+              "school": "Evocation",
+              "duration": {
+                "durationInterval": 0,
+                "durationUnit": null,
+                "durationType": "Until Dispelled"
+              },
+              "activation": {
+                "activationTime": 1,
+                "activationType": 1
+              },
+              "range": {
+                "origin": "Touch",
+                "rangeValue": 0,
+                "aoeType": null,
+                "aoeValue": null
+              },
+              "asPartOfWeaponAttack": false,
+              "description": "<p>A flame, equivalent in brightness to a torch, springs forth from an object that you touch. The effect looks like a regular flame, but it creates no heat and doesn't use oxygen. A <strong>continual flame</strong> can be covered or hidden but not smothered or quenched.</p>",
+              "snippet": "",
+              "concentration": false,
+              "ritual": false,
+              "rangeArea": null,
+              "damageEffect": null,
+              "components": [
+                1,
+                2,
+                3
+              ],
+              "componentsDescription": "ruby dust worth 50 gp, which the spell consumes",
+              "saveDcAbilityId": null,
+              "healing": null,
+              "healingDice": null,
+              "tempHpDice": null,
+              "attackType": null,
+              "canCastAtHigherLevel": false,
+              "isHomebrew": false,
+              "version": null,
+              "sourceId": 2,
+              "sourcePageNumber": 227,
+              "requiresSavingThrow": false,
+              "requiresAttackRoll": false,
+              "atHigherLevels": {
+                "scaleType": null,
+                "higherLevelDefinitions": [],
+                "additionalAttacks": [],
+                "additionalTargets": [],
+                "areaOfEffect": [],
+                "duration": [],
+                "creatures": [],
+                "special": [],
+                "points": []
+              },
+              "modifiers": [],
+              "conditions": [],
+              "tags": [
+                "Creation"
+              ],
+              "castingTimeDescription": ""
+            },
+            "prepared": false,
+            "countsAsKnownSpell": true,
+            "usesSpellSlot": true,
+            "castAtLevel": null,
+            "alwaysPrepared": false,
+            "restriction": null,
+            "spellCastingAbilityId": null,
+            "displayAsAttack": null,
+            "additionalDescription": null,
+            "castOnlyAsRitual": false,
+            "ritualCastingType": null,
+            "range": {
+              "origin": "Touch",
+              "rangeValue": 0,
+              "aoeType": null,
+              "aoeValue": null
+            },
+            "activation": {
+              "activationTime": 1,
+              "activationType": 1
+            },
+            "baseLevelAtWill": false,
+            "atWillLimitedUseLevel": null,
+            "componentId": 0,
+            "componentTypeId": 0
+          },
+          {
+            "id": 138231,
+            "entityTypeId": 435869154,
+            "definition": {
+              "id": 2397,
+              "name": "Shape Water",
+              "level": 0,
+              "school": "Transmutation",
+              "duration": {
+                "durationInterval": null,
+                "durationUnit": null,
+                "durationType": "Instantaneous"
+              },
+              "activation": {
+                "activationTime": 1,
+                "activationType": 1
+              },
+              "range": {
+                "origin": "Ranged",
+                "rangeValue": 30,
+                "aoeType": "Cube",
+                "aoeValue": 5
+              },
+              "asPartOfWeaponAttack": false,
+              "description": "<p>You choose an area of water that you can see within range and that fits within a 5-foot cube. You manipulate it in one of the following ways:</p>\r\n<ul>\r\n<li>\r\n<p>You instantaneously move or otherwise change the flow of the water as you direct, up to 5 feet in any direction. This movement doesn&rsquo;t have enough force to cause damage.</p>\r\n</li>\r\n<li>\r\n<p>You cause the water to form into simple shapes and animate at your direction. This change lasts for 1 hour.</p>\r\n</li>\r\n<li>\r\n<p>You change the water&rsquo;s color or opacity. The water must be changed in the same way throughout. This change lasts for 1 hour.</p>\r\n</li>\r\n<li>\r\n<p>You freeze the water, provided that there are no creatures in it. The water unfreezes in 1 hour.</p>\r\n</li>\r\n</ul>\r\n<p>If you cast this spell multiple times, you can have no more than two of its non-instantaneous effects active at a time, and you can dismiss such an effect as an action.</p>",
+              "snippet": "",
+              "concentration": false,
+              "ritual": false,
+              "rangeArea": null,
+              "damageEffect": null,
+              "components": [
+                2
+              ],
+              "componentsDescription": "",
+              "saveDcAbilityId": null,
+              "healing": null,
+              "healingDice": null,
+              "tempHpDice": null,
+              "attackType": null,
+              "canCastAtHigherLevel": false,
+              "isHomebrew": false,
+              "version": null,
+              "sourceId": 4,
+              "sourcePageNumber": 164,
+              "requiresSavingThrow": false,
+              "requiresAttackRoll": false,
+              "atHigherLevels": {
+                "scaleType": null,
+                "higherLevelDefinitions": [],
+                "additionalAttacks": [],
+                "additionalTargets": [],
+                "areaOfEffect": [],
+                "duration": [],
+                "creatures": [],
+                "special": [],
+                "points": []
+              },
+              "modifiers": [],
+              "conditions": [],
+              "tags": [
+                "Control"
+              ],
+              "castingTimeDescription": ""
+            },
+            "prepared": false,
+            "countsAsKnownSpell": true,
+            "usesSpellSlot": false,
+            "castAtLevel": null,
+            "alwaysPrepared": false,
+            "restriction": null,
+            "spellCastingAbilityId": null,
+            "displayAsAttack": null,
+            "additionalDescription": null,
+            "castOnlyAsRitual": false,
+            "ritualCastingType": null,
+            "range": {
+              "origin": "Ranged",
+              "rangeValue": 30,
+              "aoeType": "Cube",
+              "aoeValue": 5
+            },
+            "activation": {
+              "activationTime": 1,
+              "activationType": 1
+            },
+            "baseLevelAtWill": false,
+            "atWillLimitedUseLevel": null,
+            "componentId": 0,
+            "componentTypeId": 0
+          },
+          {
+            "id": 138481,
+            "entityTypeId": 435869154,
+            "definition": {
+              "id": 2188,
+              "name": "Message",
+              "level": 0,
+              "school": "Transmutation",
+              "duration": {
+                "durationInterval": 1,
+                "durationUnit": "Round",
+                "durationType": "Time"
+              },
+              "activation": {
+                "activationTime": 1,
+                "activationType": 1
+              },
+              "range": {
+                "origin": "Ranged",
+                "rangeValue": 120,
+                "aoeType": null,
+                "aoeValue": null
+              },
+              "asPartOfWeaponAttack": false,
+              "description": "<p>You point your finger toward a creature within range and whisper a message. The target (and only the target) hears the message and can reply in a whisper that only you can hear.</p>\r\n<p>You can cast this spell through solid objects if you are familiar with the target and know it is beyond the barrier. Magical silence, 1 foot of stone, 1 inch of common metal, a thin sheet of lead, or 3 feet of wood blocks the spell. The spell doesn't have to follow a straight line and can travel freely around corners or through openings.</p>",
+              "snippet": "",
+              "concentration": false,
+              "ritual": false,
+              "rangeArea": null,
+              "damageEffect": null,
+              "components": [
+                1,
+                2,
+                3
+              ],
+              "componentsDescription": "a short piece of copper wire",
+              "saveDcAbilityId": null,
+              "healing": null,
+              "healingDice": null,
+              "tempHpDice": null,
+              "attackType": null,
+              "canCastAtHigherLevel": false,
+              "isHomebrew": false,
+              "version": null,
+              "sourceId": 2,
+              "sourcePageNumber": 259,
+              "requiresSavingThrow": false,
+              "requiresAttackRoll": false,
+              "atHigherLevels": {
+                "scaleType": "characterlevel",
+                "higherLevelDefinitions": [],
+                "additionalAttacks": [],
+                "additionalTargets": [],
+                "areaOfEffect": [],
+                "duration": [],
+                "creatures": [],
+                "special": [],
+                "points": []
+              },
+              "modifiers": [],
+              "conditions": [],
+              "tags": [
+                "Communication",
+                "Social"
+              ],
+              "castingTimeDescription": ""
+            },
+            "prepared": false,
+            "countsAsKnownSpell": true,
+            "usesSpellSlot": false,
+            "castAtLevel": null,
+            "alwaysPrepared": false,
+            "restriction": null,
+            "spellCastingAbilityId": null,
+            "displayAsAttack": null,
+            "additionalDescription": null,
+            "castOnlyAsRitual": false,
+            "ritualCastingType": null,
+            "range": {
+              "origin": "Ranged",
+              "rangeValue": 120,
+              "aoeType": null,
+              "aoeValue": null
+            },
+            "activation": {
+              "activationTime": 1,
+              "activationType": 1
+            },
+            "baseLevelAtWill": false,
+            "atWillLimitedUseLevel": null,
+            "componentId": 0,
+            "componentTypeId": 0
           }
         ]
       }
@@ -15192,30 +15925,12 @@
           "privacyType": 3
         },
         {
-          "userId": 102152460,
-          "username": "Alan77",
-          "characterId": 10886587,
-          "characterName": "John",
-          "characterUrl": "/profile/Alan77/characters/10886587",
-          "avatarUrl": "https://media-waterdeep.cursecdn.com/avatars/thumbnails/17/175/150/150/636377833949480548.jpeg",
-          "privacyType": 3
-        },
-        {
           "userId": 101003682,
           "username": "Pharylon",
           "characterId": 11040900,
           "characterName": "Tyanna",
           "characterUrl": "/profile/Pharylon/characters/11040900",
           "avatarUrl": "https://media-waterdeep.cursecdn.com/avatars/thumbnails/5843/685/209/150/636910454601513097.png",
-          "privacyType": 3
-        },
-        {
-          "userId": 101418809,
-          "username": "GoddessOfTheHunt",
-          "characterId": 11496159,
-          "characterName": "Rowan",
-          "characterUrl": "/profile/GoddessOfTheHunt/characters/11496159",
-          "avatarUrl": "https://media-waterdeep.cursecdn.com/avatars/thumbnails/10/625/150/150/636344369279195008.png",
           "privacyType": 3
         },
         {
@@ -15237,12 +15952,21 @@
           "privacyType": 3
         },
         {
-          "userId": 101418809,
-          "username": "GoddessOfTheHunt",
-          "characterId": 12157015,
-          "characterName": "Illithyia",
-          "characterUrl": "/profile/GoddessOfTheHunt/characters/12157015",
-          "avatarUrl": "https://media-waterdeep.cursecdn.com/avatars/thumbnails/17/205/150/150/636377839599106511.jpeg",
+          "userId": 102152460,
+          "username": "Alan77",
+          "characterId": 12517263,
+          "characterName": "Tamak",
+          "characterUrl": "/profile/Alan77/characters/12517263",
+          "avatarUrl": "https://media-waterdeep.cursecdn.com/avatars/thumbnails/6200/767/150/209/636951084534893405.jpeg",
+          "privacyType": 3
+        },
+        {
+          "userId": 105247957,
+          "username": "matthallman",
+          "characterId": 12569836,
+          "characterName": "Merle",
+          "characterUrl": "/profile/matthallman/characters/12569836",
+          "avatarUrl": "",
           "privacyType": 3
         }
       ]
@@ -18052,7 +18776,7 @@
         "skillProficienciesDescription": "Insight, Persuasion",
         "toolProficienciesDescription": "",
         "languagesDescription": "Two of your choice",
-        "equipmentDescription": "A set of fine clothes and a pouch containing 5 gp",
+        "equipmentDescription": "A set of Clothes, Fine;fine clothes and a pouch containing 5 gp",
         "featureName": "Court Functionary",
         "featureDescription": "<p>Your knowledge of how bureaucracies function lets you gain access to the records and inner workings of any noble court or government you encounter. You know who the movers and shakers are, whom to go to for the favors you seek, and what the current intrigues of interest in the <span>group are.</span></p>",
         "avatarUrl": null,
@@ -18064,9 +18788,9 @@
         ],
         "suggestedLanguages": [],
         "organization": null,
-        "contractsDescription": null,
-        "spellsPreDescription": null,
-        "spellsPostDescription": null,
+        "contractsDescription": "",
+        "spellsPreDescription": "",
+        "spellsPostDescription": "",
         "personalityTraits": [
           {
             "id": 432,
@@ -21994,22 +22718,6 @@
         "prerequisites": []
       },
       {
-        "id": 97732,
-        "entityTypeId": 1088085227,
-        "name": "Heavy blow",
-        "description": "<p>+1 Str or Dex</p>\r\n<p>when using a heavy weapon damage die type is increased by 1 die type. Ex. d4 to d6</p>",
-        "snippet": "",
-        "activation": {
-          "activationTime": null,
-          "activationType": null
-        },
-        "features": null,
-        "sourceId": null,
-        "sourcePageNumber": null,
-        "creatureRules": [],
-        "prerequisites": []
-      },
-      {
         "id": 97734,
         "entityTypeId": 1088085227,
         "name": "Armor Master",
@@ -22104,6 +22812,38 @@
             ]
           }
         ]
+      },
+      {
+        "id": 115959,
+        "entityTypeId": 1088085227,
+        "name": "Heavy Blow",
+        "description": "<p>you are master at using heavy weapons to the fullest effect, granting you the following benefits:</p>\r\n<ul>\r\n<li>Your strength or dexterity increases by 1, to maximum of 20&nbsp;</li>\r\n<li>When using a heavy weapon, the damage die type of the weapon increases by 1 die type. D4 to D6, D6 to D8, D8 to D10, D10 to D12, and D12 to D12+D4.</li>\r\n</ul>",
+        "snippet": "",
+        "activation": {
+          "activationTime": null,
+          "activationType": null
+        },
+        "features": null,
+        "sourceId": null,
+        "sourcePageNumber": null,
+        "creatureRules": [],
+        "prerequisites": []
+      },
+      {
+        "id": 115962,
+        "entityTypeId": 1088085227,
+        "name": "jodsvSDGv",
+        "description": "<p>gdfgedzrfvdc</p>",
+        "snippet": "grdgz",
+        "activation": {
+          "activationTime": null,
+          "activationType": null
+        },
+        "features": null,
+        "sourceId": null,
+        "sourcePageNumber": null,
+        "creatureRules": [],
+        "prerequisites": []
       }
     ],
     "portraits": [
