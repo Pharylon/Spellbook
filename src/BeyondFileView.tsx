@@ -1,5 +1,5 @@
 import React from "react";
-import BeyondFile, { ClassSpell, Spell } from "./character";
+import BeyondFile, { Spell } from "./character";
 import { sortMultipleSpells } from "./spellLevel";
 import SpellBook from "./SpellBook";
 

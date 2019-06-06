@@ -4,6 +4,7 @@ import BeyondFile from "./character";
 import "./normalize.css";
 import BeyondFileView from "./BeyondFileView";
 import Instructions from "./Instructions";
+import WindowPortal from "./WindowPortal";
 
 interface State {
   file: BeyondFile | undefined;
@@ -30,6 +31,7 @@ class App extends Component<{}, State> {
     else {
       alert("Sorry, could not load character from memory.");
       const characters = [...this.state.characters.filter(x => x !== name)];
+      characters.sort((a, b) => a < b ? 0 : 1);
       this.setState({ characters }, () => {
         const characterJson = JSON.stringify(characters);
         localStorage.setItem("characters", characterJson);
@@ -43,6 +45,7 @@ class App extends Component<{}, State> {
         const charName = parsed.character.name;
         localStorage.setItem(charName, text);
         const characters = [...this.state.characters.filter(x => x !== charName), charName];
+        characters.sort((a, b) => a < b ? 0 : 1);
         this.setState({ characters }, () => {
           const characterJson = JSON.stringify(characters);
           localStorage.setItem("characters", characterJson);
@@ -118,6 +121,9 @@ class App extends Component<{}, State> {
             <div id="beyondFileView">
               <BeyondFileView file={this.state.file} />
             </div>
+            // <WindowPortal>
+            //   <BeyondFileView file={this.state.file} />
+            // </WindowPortal>
           )
         }
       </div>
