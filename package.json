@@ -12,11 +12,10 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-dropzone": "^10.1.5",
-    "react-new-window": "^0.1.1",
     "react-scripts": "3.0.1",
     "typescript": "3.4.5"
   },
-  "homepage": "https://pharylon.github.io/spellbook",
+  "homepage": "https://pharylon.github.io/Spellbook",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

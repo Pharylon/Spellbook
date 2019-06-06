@@ -4,7 +4,7 @@ import BeyondFile from "./character";
 import "./normalize.css";
 import BeyondFileView from "./BeyondFileView";
 import Instructions from "./Instructions";
-import WindowPortal from "./WindowPortal";
+
 
 interface State {
   file: BeyondFile | undefined;
