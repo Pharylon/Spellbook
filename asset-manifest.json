@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/spellbook/static/css/main.e2c3f6fe.chunk.css",
+    "main.js": "/spellbook/static/js/main.02bab954.chunk.js",
+    "main.js.map": "/spellbook/static/js/main.02bab954.chunk.js.map",
+    "runtime~main.js": "/spellbook/static/js/runtime~main.86bdc991.js",
+    "runtime~main.js.map": "/spellbook/static/js/runtime~main.86bdc991.js.map",
+    "static/js/2.e1ec3000.chunk.js": "/spellbook/static/js/2.e1ec3000.chunk.js",
+    "static/js/2.e1ec3000.chunk.js.map": "/spellbook/static/js/2.e1ec3000.chunk.js.map",
+    "index.html": "/spellbook/index.html",
+    "precache-manifest.52e82700e117c4787bbdc01c8c187f3c.js": "/spellbook/precache-manifest.52e82700e117c4787bbdc01c8c187f3c.js",
+    "service-worker.js": "/spellbook/service-worker.js",
+    "static/css/main.e2c3f6fe.chunk.css.map": "/spellbook/static/css/main.e2c3f6fe.chunk.css.map"
+  }
+}
