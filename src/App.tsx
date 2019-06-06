@@ -7,13 +7,11 @@ import Instructions from "./Instructions";
 
 interface State {
   file: BeyondFile | undefined;
-  hideInstructions: boolean;
 }
 
 class App extends Component<{}, State> {
   state: State = {
     file: undefined,
-    hideInstructions: false,
   };
   // async componentDidMount() {
   //   const file = await spellLoader.getCharacter();
@@ -24,17 +22,18 @@ class App extends Component<{}, State> {
       const parsed = JSON.parse(text);
       if (parsed && parsed.character) {
         this.setState({ file: parsed}, () => {
-          this.setState({hideInstructions: true});
+          const myView = document.getElementById("beyondFileView");
+          if (myView){
+            myView.scrollIntoView();
+          }           
         });
       }
       else {
         alert("That is not a valid JSON!");
-        this.setState({hideInstructions: false});
       }
     }
     catch {
       alert("That is not a valid JSON!");
-      this.setState({hideInstructions: false});    
     }
   }
   updateCharacterBlob = (blob: Blob) => {
@@ -68,11 +67,15 @@ class App extends Component<{}, State> {
           <span>This page is in Beta! If you find a problem, please </span>
           <a href="https://github.com/Pharylon/Spellbook/issues">submit a bug report.</a> Thanks!
         </div>
-        <div className={this.state.hideInstructions ? "instructions hide-instructions" : "instructions"}>
+        <div className={"instructions"}>
           <Instructions updateCharacterJson={this.updateCharacterBlob} />
         </div>
         {
-          this.state.file && <BeyondFileView file={this.state.file} />
+          this.state.file && (
+            <div id="beyondFileView">
+              <BeyondFileView file={this.state.file} />
+            </div>
+          )
         }
       </div>
     );
