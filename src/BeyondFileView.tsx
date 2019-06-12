@@ -1,17 +1,17 @@
 import React from "react";
-import BeyondFile, { Spell } from "./character";
+import BeyondFile, { Spell, BeyondCharacter } from "./character";
 import { sortMultipleSpells } from "./spellLevel";
 import SpellBook from "./SpellBook";
 
 interface IBeyondFileView {
-  file: BeyondFile;
+  file: BeyondCharacter;
 }
 
 class BeyondFileView extends React.PureComponent<IBeyondFileView> {
   getClassSpells = (className: string) => {
-    const myClass = this.props.file.character.classes.find(x => x.definition.name === className);
+    const myClass = this.props.file.classes.find(x => x.definition.name === className);
     if (myClass){
-      const myClassSpells = this.props.file.character.classSpells.find(x => x.entityTypeId === myClass.entityTypeId);
+      const myClassSpells = this.props.file.classSpells.find(x => x.entityTypeId === myClass.entityTypeId);
       if (myClassSpells){
         return myClassSpells.spells;
       }
@@ -19,14 +19,14 @@ class BeyondFileView extends React.PureComponent<IBeyondFileView> {
   }
   getAllClassSpells = () => {
     const allClassSpells: Spell[] = [];
-    this.props.file.character.classSpells.forEach(cs => allClassSpells.push(...cs.spells));
+    this.props.file.classSpells.forEach(cs => allClassSpells.push(...cs.spells));
     return allClassSpells;
   }
   render(){
     //const wizardSpells = this.getClassSpells("Wizard");
     const classSpells = this.getAllClassSpells();
-    const itemSpells = this.props.file.character.spells.item;
-    const featSpells = this.props.file.character.spells.feat;
+    const itemSpells = this.props.file.spells.item;
+    const featSpells = this.props.file.spells.feat;
     const spellsByLevel = sortMultipleSpells(classSpells, itemSpells, featSpells);
     if (spellsByLevel.find(x => x.spells.length > 0)){ 
       return (

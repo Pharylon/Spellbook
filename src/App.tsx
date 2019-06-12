@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 import "./App.css";
-import BeyondFile from "./character";
+import BeyondFile, { BeyondCharacter } from "./character";
 import "./normalize.css";
 import BeyondFileView from "./BeyondFileView";
 import Instructions from "./Instructions";
 
 
 interface State {
-  file: BeyondFile | undefined;
+  file: BeyondCharacter | undefined;
   characters: string[];
 }
 
@@ -38,17 +38,36 @@ class App extends Component<{}, State> {
       });
     }
   }
+  deleteSaved = (name: string) => {
+    localStorage.removeItem(name);
+    const characters = [...this.state.characters.filter(x => x !== name)];
+    characters.sort((a, b) => a < b ? 0 : 1);
+    this.setState({ characters });
+  }
   updateCharacterJson = (text: string) => {
     try {
-      const parsed: BeyondFile = JSON.parse(text);
-      if (parsed && parsed.character) {
-        const charName = parsed.character.name;
-        localStorage.setItem(charName, text);
+      console.log(text);
+      const parsed: BeyondCharacter = JSON.parse(text);
+      if (parsed) {
+        const charName = parsed.name;
+        try{
+          localStorage.setItem(charName, text);
+        }
+        catch (err){
+          console.log("Couldn't save character", err);
+        }
         const characters = [...this.state.characters.filter(x => x !== charName), charName];
         characters.sort((a, b) => a < b ? 0 : 1);
         this.setState({ characters }, () => {
           const characterJson = JSON.stringify(characters);
-          localStorage.setItem("characters", characterJson);
+          try{
+            localStorage.setItem("characters", characterJson);
+          }
+          catch (err){
+            console.log("Couldn't save character list", err);
+            localStorage.clear();
+            localStorage.setItem("characters", characterJson);
+          }          
         });
         this.setState({ file: parsed }, () => {
           const myView = document.getElementById("beyondFileView");
@@ -58,22 +77,13 @@ class App extends Component<{}, State> {
         });
       }
       else {
-        alert("That is not a valid JSON!");
+        alert("ERR1: That is not a valid JSON!");
       }
     }
-    catch {
-      alert("That is not a valid JSON!");
+    catch (err) {
+      console.log("ERR2", err);
+      alert("ERR2: Something went wrong!");
     }
-  }
-  updateCharacterBlob = (blob: Blob) => {
-    console.log("Blob One");
-    const reader = new FileReader();
-    reader.onload = () => {
-      if (reader.result && typeof reader.result === "string") {
-        this.updateCharacterJson(reader.result);
-      }
-    };
-    reader.readAsText(blob);
   }
   render() {
     return (
@@ -104,17 +114,19 @@ class App extends Component<{}, State> {
                   <div className="step-title">Load A previously Saved Character</div>
                   <ul>
                     {this.state.characters.map(x => (
-                      <li onClick={() => this.loadSaved(x)} key={x}>
-                        <span className="previous-character">{x}&nbsp;</span>
+                      <li key={x}>
+                        <span onClick={() => this.loadSaved(x)} className="previous-character">{x}</span>
+                        <span>&nbsp;&nbsp;&nbsp;</span>
+                        <span onClick={() => this.deleteSaved(x)} className="fa fa-trash">&nbsp;</span>
+
                       </li>
                     ))}
                   </ul>
                 </div>
-                <div className="or"> - OR LOAD A NEW FILE -</div>
               </div>
             )
           }
-          <Instructions updateCharacterJson={this.updateCharacterBlob} />
+          <Instructions updateCharacterJson={this.updateCharacterJson} />
         </div>
         {
           this.state.file && (
