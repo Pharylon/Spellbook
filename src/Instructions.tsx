@@ -1,5 +1,4 @@
 import React from "react";
-import DropZone from "react-dropzone";
 import "./steps.css";
 
 interface IInstructions {

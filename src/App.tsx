@@ -1,25 +1,28 @@
 import React, { Component } from "react";
 import "./App.css";
-import BeyondFile, { BeyondCharacter } from "./character";
+import { BeyondCharacter } from "./character";
 import "./normalize.css";
 import BeyondFileView from "./BeyondFileView";
 import Instructions from "./Instructions";
 
 
 interface State {
-  file: BeyondCharacter | undefined;
+  character: BeyondCharacter | undefined;
   characters: string[];
 }
 
 class App extends Component<{}, State> {
   state: State = {
-    file: undefined,
+    character: undefined,
     characters: [],
   };
   componentDidMount() {
     const json = localStorage.getItem("characters");
     if (json) {
       const characters: string[] = JSON.parse(json);
+      if (process.env.NODE_ENV === "development" && characters.length > 0){
+        this.loadSaved(characters[0]);
+      }
       this.setState({ characters });
     }
   }
@@ -46,7 +49,6 @@ class App extends Component<{}, State> {
   }
   updateCharacterJson = (text: string) => {
     try {
-      console.log(text);
       const parsed: BeyondCharacter = JSON.parse(text);
       if (parsed) {
         const charName = parsed.name;
@@ -69,7 +71,7 @@ class App extends Component<{}, State> {
             localStorage.setItem("characters", characterJson);
           }          
         });
-        this.setState({ file: parsed }, () => {
+        this.setState({ character: parsed }, () => {
           const myView = document.getElementById("beyondFileView");
           if (myView) {
             myView.scrollIntoView({ behavior: "smooth" });
@@ -129,9 +131,9 @@ class App extends Component<{}, State> {
           <Instructions updateCharacterJson={this.updateCharacterJson} />
         </div>
         {
-          this.state.file && (
+          this.state.character && (
             <div id="beyondFileView">
-              <BeyondFileView file={this.state.file} />
+              <BeyondFileView file={this.state.character} />
             </div>
             // <WindowPortal>
             //   <BeyondFileView file={this.state.file} />

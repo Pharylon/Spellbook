@@ -1,5 +1,7 @@
 .spell-name{
   font-weight: bold;
+  font-family: "FaerieMootOrnate";
+  font-size: 2em;
 }
 
 h1{
@@ -68,8 +70,15 @@ a{
 }
 
 .spellbook{
+  font-family: "FaerieMootSimple";
   margin: 0px 5px 0px 5px;
 }
+
+.spell-level-name{
+  font-size: 3em;
+  font-family: "FaerieMootOrnate";
+}
+
 
 @media print {
   body * {

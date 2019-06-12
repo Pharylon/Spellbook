@@ -13,9 +13,7 @@ export default class SpellBook extends React.Component<ISpellBookProps> {
         <div className="section-to-print">
           {this.props.spells.map(sl => (
             <div key={sl.level}>
-              {
-                sl.level ? <h1>Level {sl.level}</h1> : <h1>Cantrips</h1>
-              }
+              <SpellLevelText level={sl.level} />
               {sl.spells.map(s => (
                 <SpellView spell={s} key={s.id} />
                 // <div>Test</div>
@@ -27,5 +25,11 @@ export default class SpellBook extends React.Component<ISpellBookProps> {
     );
   }
 }
+
+
+const SpellLevelText = (props: {level: number}) => {
+  const levelName = props.level || "Cantrips";
+  return <h1 className="spell-level-name">{levelName}</h1>;
+};
 
 

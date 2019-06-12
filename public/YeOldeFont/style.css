@@ -1,0 +1,13 @@
+/* font converted using font-converter.net. thank you! */
+@font-face {
+  font-family: "OffenbacherSchwabacherCAT";
+  src: url("./fonts/OfenbacherSchwabCAT.eot"); /* IE9 Compat Modes */
+  src: url("./fonts/OfenbacherSchwabCAT.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("./fonts/OfenbacherSchwabCAT.otf") format("opentype"), /* Open Type Font */
+    url("./fonts/OfenbacherSchwabCAT.svg") format("svg"), /* Legacy iOS */
+    url("./fonts/OfenbacherSchwabCAT.ttf") format("truetype"), /* Safari, Android, iOS */
+    url("./fonts/OfenbacherSchwabCAT.woff") format("woff"), /* Modern Browsers */
+    url("./fonts/OfenbacherSchwabCAT.woff2") format("woff2"); /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal;
+}
