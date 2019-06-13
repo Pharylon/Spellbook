@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "be9dfd42c29c637763f11b16367c7ec4",
+    "revision": "aef9f6327eddd2d5a63600f91aa51846",
     "url": "/Spellbook/index.html"
   },
   {
-    "revision": "e3cbc9b9398d80b904d6",
+    "revision": "62474c08252b142cdb0c",
     "url": "/Spellbook/static/css/main.9af7c896.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Spellbook/static/js/2.6eed1af0.chunk.js"
   },
   {
-    "revision": "e3cbc9b9398d80b904d6",
-    "url": "/Spellbook/static/js/main.150b0f10.chunk.js"
+    "revision": "62474c08252b142cdb0c",
+    "url": "/Spellbook/static/js/main.57e183ba.chunk.js"
   },
   {
     "revision": "fdae0d4b641e9f1a8a1d",
