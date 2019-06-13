@@ -47,6 +47,7 @@ export const sortMultipleSpells = (...collections: Array<Spell[] | undefined>): 
       allSpells.push(...uniqueSpells);
     }
   });
+  LogForDiagnostics(allSpells);
   return sortSpells(allSpells);
 };
 
@@ -72,3 +73,27 @@ export const sortSpells = (spells: Spell[]): SpellLevelCollection[] => {
   return spellLevels;
 };
 
+
+const LogForDiagnostics = (spells: Spell[]) => {
+  if (process.env.NODE_ENV === "development"){
+    //ACTIVATION INFO;
+    const uniqueActivations: Array<{name: string, activation: number | null}> = [];
+    spells.forEach(s => {
+      const match = uniqueActivations.find(x => x.activation === s.definition.activation.activationType);
+      if (!match){
+        uniqueActivations.push({name: s.definition.name, activation: s.definition.activation.activationType});
+      }
+    });
+    console.log(uniqueActivations);
+
+    // //AOE Type
+    // const uniqueRange: string[] = [];
+    // spells.forEach(s => {
+    //   const match = uniqueActivations.find(x => x.activation === s.definition.activation.activationType);
+    //   if (!match){
+    //     uniqueActivations.push(s.definition.range.aoeType);
+    //   }
+    // });
+    // console.log(uniqueActivations);
+  }
+};

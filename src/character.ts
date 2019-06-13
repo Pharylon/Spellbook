@@ -306,6 +306,7 @@ export enum Origin {
   Self = "Self",
   Touch = "Touch",
   Unlimited = "Unlimited",
+  Sight = "Sight",
 }
 
 

@@ -19,11 +19,18 @@ class App extends Component<{}, State> {
   componentDidMount() {
     const json = localStorage.getItem("characters");
     if (json) {
-      const characters: string[] = JSON.parse(json);
-      if (process.env.NODE_ENV === "development" && characters.length > 0){
-        this.loadSaved(characters[0]);
+      try {
+        const characters: string[] = JSON.parse(json);
+        if (process.env.NODE_ENV === "development" && characters.length > 0) {
+          this.loadSaved(characters[0]);
+        }
+        this.setState({ characters });
       }
-      this.setState({ characters });
+      catch (err) {
+        localStorage.clear();
+        console.log("Something wrong with JSON", json);
+      }
+
     }
   }
   loadSaved = (name: string) => {
@@ -52,30 +59,31 @@ class App extends Component<{}, State> {
       const parsed: BeyondCharacter = JSON.parse(text);
       if (parsed) {
         const charName = parsed.name;
-        try{
+        try {
           localStorage.setItem(charName, text);
         }
-        catch (err){
+        catch (err) {
           console.log("Couldn't save character", err);
         }
-        const characters = [...this.state.characters.filter(x => x !== charName), charName];
-        characters.sort((a, b) => a < b ? 0 : 1);
-        this.setState({ characters }, () => {
-          const characterJson = JSON.stringify(characters);
-          try{
-            localStorage.setItem("characters", characterJson);
-          }
-          catch (err){
-            console.log("Couldn't save character list", err);
-            localStorage.clear();
-            localStorage.setItem("characters", characterJson);
-          }          
-        });
         this.setState({ character: parsed }, () => {
           const myView = document.getElementById("beyondFileView");
           if (myView) {
             myView.scrollIntoView({ behavior: "smooth" });
           }
+          const characters = [...this.state.characters.filter(x => x !== charName), charName];
+          characters.sort((a, b) => a < b ? 0 : 1);
+          this.setState({ characters }, () => {
+            const characterJson = JSON.stringify(characters);
+            try {
+              console.log("Saving", characterJson);
+              localStorage.setItem("characters", characterJson);
+            }
+            catch (err) {
+              console.log("Couldn't save character list", err);
+              localStorage.clear();
+              localStorage.setItem("characters", characterJson);
+            }
+          });
         });
       }
       else {
