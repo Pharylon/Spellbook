@@ -1,0 +1,13 @@
+/* font converted using font-converter.net. thank you! */
+@font-face {
+  font-family: "FaerieMootOrnate";
+  src: url("./fonts/faemoot4o.eot"); /* IE9 Compat Modes */
+  src: url("./fonts/faemoot4o.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("./fonts/faemoot4o.otf") format("opentype"), /* Open Type Font */
+    url("./fonts/faemoot4o.svg") format("svg"), /* Legacy iOS */
+    url("./fonts/faemoot4o.ttf") format("truetype"), /* Safari, Android, iOS */
+    url("./fonts/faemoot4o.woff") format("woff"), /* Modern Browsers */
+    url("./fonts/faemoot4o.woff2") format("woff2"); /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal;
+}
