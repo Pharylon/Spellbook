@@ -7,9 +7,38 @@ export interface ISpellBookProps {
 }
 
 export default class SpellBook extends React.Component<ISpellBookProps> {
+  fontChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const spellBook = document.getElementById("spellbook");
+    const spellTitles = document.querySelectorAll(".spell-title");
+    if (spellBook){
+      if (e.target.value === "normal"){
+        spellBook.classList.remove("ye-olde");
+        spellBook.classList.remove("faerie");
+        spellTitles.forEach(x => x.classList.remove("faerie"));
+      }
+      if (e.target.value === "faerie"){
+        spellBook.classList.remove("ye-olde");
+        spellBook.classList.add("faerie");
+        spellTitles.forEach(x => x.classList.add("faerie"));
+      }
+      if (e.target.value === "ye-olde"){
+        spellBook.classList.add("ye-olde");
+        spellBook.classList.remove("faerie");
+        spellTitles.forEach(x => x.classList.remove("faerie"));
+      }
+    }
+    
+  }
   public render() {
     return (
-      <div className="spellbook">
+      <div id="spellbook">
+        <div>
+          <select name="font-selector" id="font-selector" onChange={this.fontChange}>
+            <option value="normal">Normal Font</option>
+            <option value="faerie">Faerie Font</option>
+            <option value="ye-olde">Ye Olde Font</option>
+          </select>
+        </div>
         <div className="section-to-print">
           {this.props.spells.map(sl => (
             <div key={sl.level}>
@@ -28,8 +57,8 @@ export default class SpellBook extends React.Component<ISpellBookProps> {
 
 
 const SpellLevelText = (props: {level: number}) => {
-  const levelName = props.level || "Cantrips";
-  return <h1 className="spell-level-name">{levelName}</h1>;
+  const levelName = props.level ? `Level ${props.level}` :  "Cantrips";
+  return <h1 className="spell-level-name spell-title">{levelName}</h1>;
 };
 
 

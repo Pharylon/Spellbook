@@ -120,7 +120,6 @@ class App extends Component<{}, State> {
                         <span onClick={() => this.loadSaved(x)} className="previous-character">{x}</span>
                         <span>&nbsp;&nbsp;&nbsp;</span>
                         <span onClick={() => this.deleteSaved(x)} className="fa fa-trash">&nbsp;</span>
-
                       </li>
                     ))}
                   </ul>

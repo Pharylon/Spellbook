@@ -9,7 +9,7 @@ export default class SpellView extends React.Component<ISpellViewProps> {
   public render() {
     return (
       <div className="spell">
-        <div className="spell-name">{this.props.spell.definition.name}</div>
+        <div className="spell-name spell-title">{this.props.spell.definition.name}</div>
         <div>Components: {getComponents(this.props.spell.definition.components)}</div>
         {
           this.props.spell.definition.componentsDescription && (

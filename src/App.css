@@ -1,7 +1,10 @@
 .spell-name{
   font-weight: bold;
-  font-family: "FaerieMootOrnate";
   font-size: 2em;
+}
+
+.spell-title.faerie{
+  font-family: "FaerieMootOrnate";
 }
 
 h1{
@@ -69,13 +72,27 @@ a{
   margin-bottom: 30px;
 }
 
-.spellbook{
-  font-family: "FaerieMootSimple";
+#spellbook{
   margin: 0px 5px 0px 5px;
+}
+
+#spellbook{
+  margin: 0px 5px 0px 5px;
+}
+
+#spellbook.faerie{
+  font-family: "FaerieMootSimple";
+}
+
+#spellbook.ye-olde{
+  font-family: "OffenbacherSchwabacherCAT";
 }
 
 .spell-level-name{
   font-size: 3em;
+}
+
+.spell-title.faerie{
   font-family: "FaerieMootOrnate";
 }
 
@@ -106,9 +123,7 @@ a{
   text-decoration: underline;
 }
 
-.or{
-  margin: auto;
-  font-size: 2em;
-  font-weight: bold;
-  margin-bottom: 10px;
+
+.normal-font{
+  font-family: Arial, Helvetica, sans-serif !important;
 }
