@@ -51,9 +51,9 @@ class Instructions extends React.Component<IInstructions, State> {
               target="_blank"
               rel="noopener noreferrer"
               href={"https://www.dndbeyond.com/my-characters"}>your character page</a> on D&amp;D Beyond,
-            click "View" on the character whose spells you wish to print.
+            click "View" on the character whose spells you wish to print. 
             Look at the URL in your browser address bar. It should end in a number.
-            Enter that number below.
+            Enter that number below. Note that the character must be public.
           </div>
           <div style={{marginTop: "10px", marginBottom: "10px"}}>
             For instance if your address was as follows:
