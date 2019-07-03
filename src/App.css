@@ -1,6 +1,7 @@
 .spell-name{
   font-weight: bold;
   font-size: 2em;
+  margin-bottom: 0px;
 }
 
 .spell-title.faerie{
@@ -76,10 +77,6 @@ a{
   margin: 0px 5px 0px 5px;
 }
 
-#spellbook{
-  margin: 0px 5px 0px 5px;
-}
-
 #spellbook.faerie{
   font-family: "FaerieMootSimple";
 }
@@ -111,6 +108,9 @@ a{
   }
   .hide-print-block{
     display: block !important;
+  }
+  .spell {
+    page-break-after: always;
   }
 }
 

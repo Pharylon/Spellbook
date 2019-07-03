@@ -9,7 +9,7 @@ export default class SpellView extends React.Component<ISpellViewProps> {
   public render() {
     return (
       <div className="spell">
-        <div className="spell-name spell-title">{this.props.spell.definition.name}</div>
+        <h2 className="spell-name spell-title">{this.props.spell.definition.name}</h2>
         <div>Casting Time: {getCastingTime(this.props.spell.definition.activation)}</div>
         <div>Range: {getRange(this.props.spell.definition)}</div>
         <div>Duration: {getDuration(this.props.spell.definition)}</div>
@@ -101,7 +101,7 @@ const getRange = (spell: ItemDefinition) => {
     return `${range.rangeValue} ft (${range.aoeValue} ${range.aoeType})`;
   }
   else if (range.rangeValue && !range.aoeValue && !range.aoeType){
-    return `${range.rangeValue} ft)`;
+    return `${range.rangeValue} ft`;
   }
   else if (range.rangeValue && range.aoeType){
     return `${range.rangeValue} ft (${range.aoeValue} ${range.aoeType})`;
